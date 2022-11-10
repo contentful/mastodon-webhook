@@ -1,15 +1,15 @@
-import contentful from 'contentful-management';
-import * as dotenv from 'dotenv';
+import contentful from 'contentful-management'
+import * as dotenv from 'dotenv'
 
-dotenv.config();
+dotenv.config()
 
-const { CMA_TOKEN, SPACE_ID, MASTODON_TOKEN, MASTODON_URL } = process.env;
+const { CMA_TOKEN, SPACE_ID, MASTODON_TOKEN, MASTODON_URL } = process.env
 
-const endpoint = `${MASTODON_URL}/api/v1/statuses?access_token=${MASTODON_TOKEN}`;
+const endpoint = `${MASTODON_URL}/api/v1/statuses?access_token=${MASTODON_TOKEN}`
 
 const client = contentful.createClient({
   accessToken: CMA_TOKEN,
-});
+})
 
 // Create webhook
 client
@@ -33,7 +33,7 @@ client
         contentType: 'application/json',
         // body: '', // the "body" property is for custom payload, see the blog post for an example
       },
-    });
+    })
   })
   .then((webhook) => console.log(webhook))
-  .catch(console.error);
+  .catch(console.error)
