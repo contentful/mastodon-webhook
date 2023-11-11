@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/contentful/mastodon-webhook#readme",
   "dependencies": {
-    "contentful-management": "^10.19.0",
+    "contentful-management": "^10.46.4",
     "dotenv": "^16.0.3"
   }
 }
